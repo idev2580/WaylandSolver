@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk" version="4.0"/>
-  <template class="Window" parent="AdwApplicationWindow">
-    <property name="default-height">640</property>
-    <property name="default-width">480</property>
+  <template class="MainWindow" parent="AdwApplicationWindow">
+    <property name="default-height">480</property>
+    <property name="default-width">640</property>
     <child>
       <object class="GtkEventControllerKey">
         <property name="propagation-phase">1</property>
@@ -11,7 +11,7 @@
       </object>
     </child>
     <child>
-      <object class="AdwToolbarView">
+      <object class="AdwToolbarView" id="_main_toolbar_view">
         <property name="top-bar-style">raised</property>
         <!--<property name="bottom-bar-style">raised</property>-->
         <child>
@@ -30,12 +30,12 @@
                 </object>
                 <!-- All methods -->
                 <object class="GtkLabel">
-                    <property name="label">Recent</property>
+                    <property name="label">All</property>
                 </object>
                 <object class="GtkScrolledWindow">
                     <property name="hscrollbar-policy">never</property>
                     <child>
-                        <object class="GtkListBox" id="recently_used">
+                        <object class="GtkListBox" id="all">
                         </object>
                     </child>
                 </object>

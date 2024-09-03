@@ -5,6 +5,7 @@ from gi.repository import Gtk, Adw, Gio, GLib, GObject
 
 @Gtk.Template(resource_path="/work/idev2580dev/waylandsolver/ui/SolverWindow.ui")
 class SolverWindow(Adw.ApplicationWindow):
+    __gtype_name__ = "SolverWindow"
     def __init__(self, app):
         super().__init__(application=app, title=_("Solver"))
         return

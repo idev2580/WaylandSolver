@@ -7,20 +7,10 @@ from wayland_solver.mainwindow import MainWindow
 class Application(Adw.Application):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.register()
-        menu = Gio.Menu()
-        about_section = Gio.Menu()
-        quit_section = Gio.Menu()
-        about_section.append(label="Show Logs", detailed_action=None)
-        about_section.append(label="Manual", detailed_action=None)
-        about_section.append(label="About", detailed_action=None)
-        quit_section.append(label="Quit", detailed_action=None)
-        menu.append_section("About", about_section)
-        menu.append_section("Quit", quit_section)
-        self.set_menubar(menu)
+        self.props.resource_base_path = "/work/idev2580dev/waylandsolver"
         self.connect('activate', self.on_activate)
     
     def on_activate(self, app):
-        self.main_win = MainWindow(application=app, show_menubar=True)
+        self.main_win = MainWindow(app)
         self.main_win.present()
     
