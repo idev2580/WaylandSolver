@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="Window" parent="AdwApplicationWindow">
+    <property name="default-height">640</property>
+    <property name="default-width">480</property>
+    <child>
+      <object class="GtkEventControllerKey">
+        <property name="propagation-phase">1</property>
+        <signal name="key-pressed" handler="_on_key_press"/>
+      </object>
+    </child>
+    <child>
+      <object class="AdwToolbarView">
+        <property name="top-bar-style">raised</property>
+        <property name="bottom-bar-style">raised</property>
+        <child>
+          <object>
+            
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/work/idev2580dev/waylandsolver">
+    <file alias="gtk/help-overlay.ui" preprocess="xml-stripblanks">ui/help-overlay.ui</file>
+    <file>style.css</file>
+    <file preprocess="xml-stripblanks">ui/HeaderBar.ui</file>
+    <file preprocess="xml-stripblanks">ui/SolverWindow.ui</file>
+    <file preprocess="xml-stripblanks">ui/MainWindow.ui</file>
+  </gresource>
+  <gresource prefix="/work/idev2580dev/waylandsolver/icons/scalable/actions">
+  </gresource>
+</gresources>
